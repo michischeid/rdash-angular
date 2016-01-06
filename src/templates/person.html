@@ -1,0 +1,111 @@
+<div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
+    <div class="col-xs-12">
+        <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+</div>
+<form>
+    <div class="row">
+        <div class="col-xs-12">
+            <rd-widget>
+                <rd-widget-body>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="firstName">Vorname</label>
+                            <input type="text" class="form-control" placeholder="Vorname"
+                                   id="firstName"/>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="name">Nachname</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="street">Straße</label>
+                            <input type="text" class="form-control" placeholder="Straße" id="street"/>
+                        </div>
+                        <div class="form-group col-sm-1 col-xs-4">
+                            <label for="no">Nr.</label>
+                            <input type="text" class="form-control" placeholder="Nr." id="no"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-2">
+                            <label for="country">Land</label>
+                            <input type="text" class="form-control" placeholder="Land" id="country"/>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="zip">PLZ</label>
+                            <input type="text" class="form-control" placeholder="PLZ" id="zip"/>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="city">Ort</label>
+                            <input type="text" class="form-control" placeholder="Ort" id="city"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="tel">Tel.</label>
+                            <input type="text" class="form-control" placeholder="Tel."  id="tel"/>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="fax">Fax</label>
+                            <input type="text" class="form-control" placeholder="Fax" id="fax"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="email">E-Mail</label>
+                            <input type="text" class="form-control" placeholder="E-Mail"  id="email"/>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="dateOfBirth">Geburtsdatum</label>
+                            <input type="date" class="form-control" placeholder="Geburtsdatum" id="dateOfBirth"/>
+                        </div>
+                    </div>
+                </rd-widget-body>
+            </rd-widget>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <rd-widget>
+                <rd-widget-body>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="firstName">Vorname</label>
+                            <input type="text" class="form-control" placeholder="Vorname"
+                                   id="firstName"/>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="name">Nachname</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="street">Straße</label>
+                            <input type="text" class="form-control" placeholder="Straße" id="street"/>
+                        </div>
+                        <div class="form-group col-sm-1 col-xs-4">
+                            <label for="no">Nr.</label>
+                            <input type="text" class="form-control" placeholder="Nr." id="no"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-2">
+                            <label for="zip">PLZ</label>
+                            <input type="text" class="form-control" placeholder="Plz" field="zip" id="zip"/>
+                        </div>
+                        <div class="col-sm-2" style="margin-bottom: 0px"></div>
+                        <div class="form-group col-lg-4">
+                            <label for="city">Ort</label>
+                            <input type="text" class="form-control" placeholder="Ort" field="city" id="city"/>
+                        </div>
+                    </div>
+                </rd-widget-body>
+            </rd-widget>
+        </div>
+    </div>
+    </div>
+</form>
