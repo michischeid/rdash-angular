@@ -9,8 +9,12 @@ angular
 function rdWidget() {
     var directive = {
         transclude: true,
-        template: '<div class="widget" ng-transclude></div>',
-        restrict: 'EA'
+        template: '<uib-accordion-group  is-open="status"><div ng-transclude></div></uib-accordion-group>',
+        restrict: 'EA',
+        scope:
+        {
+            status:'='
+        }
     };
     return directive;
 

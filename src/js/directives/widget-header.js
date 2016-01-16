@@ -11,10 +11,11 @@ function rdWidgetTitle() {
         requires: '^rdWidget',
         scope: {
             title: '@',
-            icon: '@'
+            icon: '@',
+            status:'='
         },
         transclude: true,
-        template: '<div class="widget-header"><div class="row"><div class="pull-left"><i class="fa" ng-class="icon"></i> {{title}} </div><div class="pull-right col-xs-6 col-sm-4" ng-transclude></div></div></div>',
+        template: '<div uib-accordion-heading><div class="row"><div class="pull-left"><i class="fa" ng-class="icon"></i> {{title}} </div><div class="pull-right col-xs-6 col-sm-4"><i class="pull-right glyphicon" ng-class="{\'glyphicon-chevron-down\': status, \'glyphicon-chevron-right\': !status}"></i></div></div></div>',
         restrict: 'E'
     };
     return directive;

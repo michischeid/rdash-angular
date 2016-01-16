@@ -1,0 +1,6 @@
+input[type=checkbox]{
+    width:25px; height:25px
+}
+*:focus, *:active {
+    outline: none !important;
+}
