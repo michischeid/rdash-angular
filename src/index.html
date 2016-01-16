@@ -31,19 +31,19 @@
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
-            Dashboard
+            Portal
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
         <li class="sidebar-title"><span>NAVIGATION</span></li>
-        <li class="sidebar-list">
-          <a href="#/person">Person <span class="menu-icon fa fa-user"></span></a>
+        <li class="sidebar-list" ng-class="{'active': activePage=='Person'}">
+          <a href="#/person" ng-click=changeActivePage("Person")>Person <span class="menu-icon fa fa-user"></span></a>
         </li>
-        <li class="sidebar-list">
-          <a href="#/motorcycles">Motorräder<span class="menu-icon fa fa-motorcycle"></span></a>
+        <li class="sidebar-list" ng-class="{'active': activePage=='Motorräder'}">
+          <a href="#/motorcycles" ng-click=changeActivePage("Motorräder")>Motorräder<span class="menu-icon fa fa-motorcycle"></span></a>
         </li>
-        <li class="sidebar-list">
-          <a href="#/events">Veranstaltungen<span class="menu-icon fa fa-flag-checkered"></span></a>
+        <li class="sidebar-list" ng-class="{'active': activePage=='Veranstaltungen'}">
+          <a href="#/events" ng-click=changeActivePage("Veranstaltungen")>Veranstaltungen<span class="menu-icon fa fa-flag-checkered"></span></a>
         </li>
       </ul>
       <div class="sidebar-footer">
@@ -117,10 +117,10 @@
             </div>
             <div class="meta">
               <div class="page">
-                Dashboard
+                {{activePage}}
               </div>
               <div class="breadcrumb-links">
-                Home / Dashboard
+                Klassik Motorsport
               </div>
             </div>
           </div>

@@ -1,3 +1,12 @@
+.active {
+    color: #fff;
+    border-left: 10px solid #e99d1a;
+}
+
+.active span{
+    color: #e99d1a;
+}
+
 input[type=checkbox]{
     width:25px; height:25px
 }
