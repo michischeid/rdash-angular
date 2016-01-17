@@ -4,19 +4,19 @@
         </uib-alert>
     </div>
 </div>
+
 <form>
 
     <uib-accordion close-others="oneAtATime">
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-success">Speichern</button>
+                <button type="button" class="btn btn-danger">Abbrechen</button>
+            </div>
+        </div>
+
         <div class="row" ng-class="collapse">
             <div class="col-xs-12">
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <button type="submit" class="btn btn-success">Speichern</button>
-                        <button type="button" class="btn btn-danger">Abbrechen</button>
-                    </div>
-                </div>
-
                 <rd-widget status=statusPerson>
                     <rd-widget-header status=statusPerson icon="fa-user" title="Personendaten">
                     </rd-widget-header>
@@ -128,7 +128,7 @@
                 </rd-widget>
             </div>
         </div>
-        </div>
+
         <div class="row">
             <div class="col-xs-12">
                 <rd-widget status=statusLicense>
@@ -148,7 +148,8 @@
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label for="isRentTransponder">Ich besitze einen eigenen Transponder</label>
-                                <input type="checkbox" class="checkbox" placeholder="Einzug" id="isRentTransponder"/>
+                                <input type="checkbox" class="checkbox" placeholder="Einzug"
+                                       id="isRentTransponder"/>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label for="transponderNo">Transpondernummer</label>
@@ -159,7 +160,6 @@
                     </rd-widget-body>
                 </rd-widget>
             </div>
-        </div>
         </div>
     </uib-accordion>
 </form>

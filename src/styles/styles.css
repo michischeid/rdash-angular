@@ -31,3 +31,7 @@ input[type=checkbox]{
 *:focus, *:active {
     outline: none !important;
 }
+
+.new-widget{
+background: rgba(92, 184, 92, 0.19);
+}

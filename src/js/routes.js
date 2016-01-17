@@ -7,24 +7,20 @@ angular.module('RDash').config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
 
         // For unmatched routes
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/Person');
 
         // Application routes
         $stateProvider
-            .state('index', {
-                url: '/',
+            .state('Person', {
+                url: '/Person',
                 templateUrl: 'templates/person.html'
             })
-            .state('person', {
-                url: '/person',
-                templateUrl: 'templates/person.html'
-            })
-            .state('motorcycles', {
-                url: '/motorcycles',
+            .state('Motorräder', {
+                url: '/Motorräder',
                 templateUrl: 'templates/motorcycles.html'
             })
-            .state('events', {
-                url: '/events',
+            .state('Veranstaltungen', {
+                url: '/Veranstaltungen',
                 templateUrl: 'templates/events.html'
             });
     }

@@ -9,11 +9,12 @@ angular
 function rdWidget() {
     var directive = {
         transclude: true,
-        template: '<uib-accordion-group  is-open="status"><div ng-transclude></div></uib-accordion-group>',
+        template: '<uib-accordion-group  is-open="status" panel-class="{{panelClass}}"><div ng-transclude></div></uib-accordion-group>',
         restrict: 'EA',
         scope:
         {
-            status:'='
+            status:'=',
+            "panelClass":'@'
         }
     };
     return directive;
