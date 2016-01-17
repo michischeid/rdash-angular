@@ -2,6 +2,24 @@
     color: #fff;
     border-left: 10px solid #e99d1a;
 }
+#sidebar-wrapper {
+    background-image: linear-gradient(45deg, black 1%, silver 40%);
+}
+.row.header{
+    background-image: linear-gradient(45deg, silver 60%, black 99%);
+}
+.sidebar-footer div a {
+    color:black;
+}
+ul.sidebar .sidebar-title.separator, .sidebar-footer, ul.sidebar .sidebar-list a:hover, ul.sidebar .sidebar-main a{
+    background:silver;
+}
+ul.sidebar .sidebar-list a{
+    color:black;
+}
+ul.sidebar .sidebar-title{
+    color: white;
+}
 
 .active span{
     color: #e99d1a;
