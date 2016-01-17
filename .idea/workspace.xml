@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42d42a13-9459-445b-9bfc-bd6bc33b54b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/motorcycles.html" afterPath="$PROJECT_DIR$/src/templates/motorcycles.html" />
     </list>
     <ignored path="rdash-angular.iws" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="motorcycles.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/templates/motorcycles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37884378">
-              <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.4587946">
+              <caret line="86" column="72" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -859,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/motorcycles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37884378">
-          <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.4587946">
+          <caret line="86" column="72" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="72" />
           <folding />
         </state>
       </provider>
