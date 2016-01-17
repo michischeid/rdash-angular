@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42d42a13-9459-445b-9bfc-bd6bc33b54b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/master-ctrl.js" afterPath="$PROJECT_DIR$/src/js/controllers/master-ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/directives/widget.js" afterPath="$PROJECT_DIR$/src/js/directives/widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/routes.js" afterPath="$PROJECT_DIR$/src/js/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/styles.css" afterPath="$PROJECT_DIR$/src/styles/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/motorcycles.html" afterPath="$PROJECT_DIR$/src/templates/motorcycles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/person.html" afterPath="$PROJECT_DIR$/src/templates/person.html" />
     </list>
     <ignored path="rdash-angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="person.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="person.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/person.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5412054">
+            <state vertical-scroll-proportion="-14.193548">
               <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36285362">
+              <caret line="38" column="64" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -795,14 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6615385">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.896679">
@@ -837,8 +831,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/person.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5412054">
+        <state vertical-scroll-proportion="-14.193548">
           <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36285362">
+          <caret line="38" column="64" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
           <folding />
         </state>
       </provider>
