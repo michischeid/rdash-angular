@@ -17,7 +17,7 @@ function MasterCtrl($scope, $cookieStore, $location) {
     };
 
     $scope.getActivePage = function () {
-        return $location.path();
+        return $location.path().replace("/","");
     };
 
     $scope.getWidth = function() {
