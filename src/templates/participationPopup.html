@@ -1,0 +1,51 @@
+<div class="dialog-contents">
+    <form>
+        <div class="row">
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <h4>{{ctrl.activeEvent.name}}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label>Am {{ctrl.activeEvent.from |date:'dd.MM'}} - {{ctrl.activeEvent.to
+                        |date:'dd.MM.yyyy'}}</label>
+                    <label> in {{ctrl.activeEvent.location}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label>Wählen sie die Motorräder aus, mit denen sie an den Start gehen möchten:</label>
+                    <div isteven-multi-select
+                         input-model="ctrl.motorcycles"
+                         output-model="ctrl.selectedMotorcycles"
+                         button-label="brand model"
+                         item-label="brand model"
+                         tick-property="selected"
+                         translation="ctrl.germanControls">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label>Die x.xx€ Teilnahmegebühr werden von Ihrem Konto abgebucht</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label>Sie bestätigen hiermit Ihre Teilnahme an der Veranstaltung {{ctrl.activeEvent.name}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <input type="button" value="jetzt kostenpflichtig teilnehmen" class="btn btn-success"
+                           ng-click="closeThisDialog('Some value')"/>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <!--checkInput() &&-->
+
+</div>
