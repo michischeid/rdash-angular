@@ -3,9 +3,9 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="9836633f-1419-4c19-a350-4b2c47d92f44" name="klassikMotorsport" url="http://portal.klassik-motorsport.de">
-        <fileTransfer host="ftp.klassik-motorsport.de" port="21" rootFolder="/www/portal" username="klassikmqn">
+        <fileTransfer host="ftp.klassik-motorsport.de" port="21" rootFolder="/www/portal" password="dfc1dfc6dfcbdfd9dfd9dfc3dfc1df98df9adf9bdf9e" username="klassikmqn">
           <advancedOptions>
-            <advancedOptions compatibilityMode="true" dataProtectionLevel="Private" maxConnections="1" passiveMode="true" showHiddenFiles="true" />
+            <advancedOptions compatibilityMode="true" dataProtectionLevel="Private" maxConnections="1" passiveMode="true" accurateTimestamps="NEVER" showHiddenFiles="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

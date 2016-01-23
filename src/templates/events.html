@@ -12,7 +12,8 @@
                     <div class="col-md-6 col-xs-6" style="margin-bottom: 20px;">
                         <rd-widget status=event.status>
                             <rd-widget-header status=event.status icon="fa-flag-checkered" title="{{event.name}}"
-                                              subtitle="({{event.from |date:'dd.MM'}}-{{event.to |date:'dd.MM.yyyy'}}) {{event.location}}">
+                                              subtitle="({{event.from |date:'dd.MM'}}-{{event.to |date:'dd.MM.yyyy'}})"
+                                              location="{{event.location}}">
                             </rd-widget-header>
                             <rd-widget-body>
                                 <div class="row">
