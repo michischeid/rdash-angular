@@ -1,39 +1,45 @@
 <div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
-	<div class="col-xs-12">
-		<uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}
-		</uib-alert>
-	</div>
+    <div class="col-xs-12">
+        <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}
+        </uib-alert>
+    </div>
 </div>
 <div ng-controller="EventCtrl as ctrl">
-	<form>
-		<uib-accordion close-others="oneAtATime">
-			<div ng-repeat="event in ctrl.events">
-				<div ng-class="collapse">
-					<div class="col-md-6 col-xs-6" style="margin-bottom: 20px;" >
-						<rd-widget status=event.status>
-							<rd-widget-header status=event.status icon="fa-flag-checkered" title="{{event.name}}" subtitle="({{event.from |date:'dd.MM'}}-{{event.to |date:'dd.MM.yyyy'}}) {{event.location}}">
-							</rd-widget-header>
-							<rd-widget-body>
-								<div class="row">
-									<div class="form-group col-lg-6">
-										<label>{{event.from |date:'dd.MM'}}-{{event.to |date:'dd.MM.yyyy'}}</label>
-									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col-lg-6">
-										<label>{{event.location}}</label>
-									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col-lg-6">
-										<button type="button" class="btn btn-success" ng-click="ctrl.openParticipationPopup(event)">teilnehmen</button>
-									</div>
-								</div>
-							</rd-widget-body>
-						</rd-widget>
-					</div>
-				</div>
-			</div>
-		</uib-accordion>
-	</form>
+    <form>
+        <uib-accordion close-others="oneAtATime">
+            <div ng-repeat="event in ctrl.events">
+                <div ng-class="collapse">
+                    <div class="col-md-6 col-xs-6" style="margin-bottom: 20px;">
+                        <rd-widget status=event.status>
+                            <rd-widget-header status=event.status icon="fa-flag-checkered" title="{{event.name}}"
+                                              subtitle="({{event.from |date:'dd.MM'}}-{{event.to |date:'dd.MM.yyyy'}}) {{event.location}}">
+                            </rd-widget-header>
+                            <rd-widget-body>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        Zuschauerplätze direkt an der Strecke.
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                                        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                                        no sea takimata sanctus est.
+
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <img class ="eventPicture" src="http://www.classic-motorrad.de/v25/images/cm2014/2014-wallduern/2014-plakat.JPG" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <button type="button" class="btn btn-success"
+                                                ng-click="ctrl.openParticipationPopup(event)">teilnehmen
+                                        </button>
+                                    </div>
+                                </div>
+                            </rd-widget-body>
+                        </rd-widget>
+                    </div>
+                </div>
+            </div>
+        </uib-accordion>
+    </form>
 </div>

@@ -16,7 +16,7 @@ function rdWidgetTitle() {
             subtitle:'@'
         },
         transclude: true,
-        template: '<div uib-accordion-heading><div class="row"><div class="pull-left"><i class="fa" ng-class="icon"></i> {{title}} <span ng-hide="!subtitle" ><br/><h6>{{subtitle}}</h6></span></div><div class="pull-right col-xs-6 col-sm-4"><i class="pull-right glyphicon" ng-class="{\'glyphicon-chevron-down\': status, \'glyphicon-chevron-right\': !status}"></i></div></div></div>',
+        template: '<div uib-accordion-heading><div class="row"><div class="pull-left"><i class="fa" ng-class="icon"></i> <span style="font-size: 20px">{{title}}</span> <span ng-hide="!subtitle" ><br/><h5>{{subtitle}}</h5></span></div><div class="pull-right col-xs-6 col-sm-4"><i class="pull-right glyphicon" ng-class="{\'glyphicon-chevron-down\': status, \'glyphicon-chevron-right\': !status}"></i></div></div></div>',
         restrict: 'E'
     };
     return directive;

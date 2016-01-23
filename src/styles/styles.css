@@ -35,3 +35,8 @@ input[type=checkbox]{
 .new-widget{
 background: rgba(92, 184, 92, 0.19);
 }
+
+.eventPicture{
+    max-width:100%;
+    max-height:100%;
+}
