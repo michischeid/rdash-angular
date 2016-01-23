@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9836633f-1419-4c19-a350-4b2c47d92f44" name="klassikMotorsport" url="http://portal.klassik-motorsport.de">
+        <fileTransfer host="ftp.klassik-motorsport.de" port="21" rootFolder="/www/portal" username="klassikmqn">
+          <advancedOptions>
+            <advancedOptions compatibilityMode="true" dataProtectionLevel="Private" maxConnections="1" passiveMode="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
