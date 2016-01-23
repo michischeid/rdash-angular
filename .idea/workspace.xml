@@ -4,7 +4,6 @@
     <list default="true" id="42d42a13-9459-445b-9bfc-bd6bc33b54b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/events.html" afterPath="$PROJECT_DIR$/src/templates/events.html" />
     </list>
     <ignored path="rdash-angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -497,7 +496,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453591523341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes">
+      <created>1453591718870</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1453591718870</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">

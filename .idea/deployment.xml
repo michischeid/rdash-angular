@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="klassikMotorsport" traceLevel="DETAILS" uploadOnCheckin="9836633f-1419-4c19-a350-4b2c47d92f44">
+  <component name="PublishConfigData" serverName="klassikMotorsport" preserveTimestamps="false" traceLevel="DETAILS" uploadOnCheckin="9836633f-1419-4c19-a350-4b2c47d92f44">
     <serverData>
       <paths name="klassikMotorsport">
         <serverdata>
@@ -11,6 +11,5 @@
       </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="klassikMotorsport" />
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
