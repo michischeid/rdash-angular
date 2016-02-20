@@ -1,9 +1,7 @@
-<div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
-    <div class="col-xs-12">
-        <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}
-        </uib-alert>
-    </div>
+<div class="col-xs-12">
+    <mc-messages></mc-messages>
 </div>
+
 <div ng-controller="EventCtrl as ctrl">
     <form>
         <uib-accordion close-others="oneAtATime">

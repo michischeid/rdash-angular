@@ -1,9 +1,7 @@
-<div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
-    <div class="col-xs-12">
-        <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}
-        </uib-alert>
-    </div>
+<div class="col-xs-12">
+    <mc-messages></mc-messages>
 </div>
+
 <div ng-controller="PersonCtrl as ctrl">
     <form name="form" ng-submit="ctrl.savePerson(ctrl.person)">
 
@@ -24,63 +22,75 @@
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="firstName">Vorname</label>
-                                    <input ng-model="ctrl.person.firstName" type="text" class="form-control" placeholder="Vorname"
+                                    <input ng-model="ctrl.person.firstName" type="text" class="form-control"
+                                           placeholder="Vorname"
                                            id="firstName"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="name">Nachname</label>
-                                    <input ng-model="ctrl.person.lastName" type="text" class="form-control" placeholder="Name" id="name"/>
+                                    <input ng-model="ctrl.person.lastName" type="text" class="form-control"
+                                           placeholder="Name" id="name"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="street">Straße</label>
-                                    <input ng-model="ctrl.person.street" type="text" class="form-control" placeholder="Straße" id="street"/>
+                                    <input ng-model="ctrl.person.street" type="text" class="form-control"
+                                           placeholder="Straße" id="street"/>
                                 </div>
                                 <div class="form-group col-sm-1 col-xs-4">
                                     <label for="no">Nr.</label>
-                                    <input ng-model="ctrl.person.streetNo" type="text" class="form-control" placeholder="Nr." id="no"/>
+                                    <input ng-model="ctrl.person.streetNo" type="text" class="form-control"
+                                           placeholder="Nr." id="no"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-2">
                                     <label for="country">Land</label>
-                                    <input ng-model="ctrl.person.country" type="text" class="form-control" placeholder="Land" id="country"/>
+                                    <input ng-model="ctrl.person.country" type="text" class="form-control"
+                                           placeholder="Land" id="country"/>
                                 </div>
                                 <div class="form-group col-sm-2">
                                     <label for="zip">PLZ</label>
-                                    <input ng-model="ctrl.person.zip" type="text" class="form-control" placeholder="PLZ" id="zip"/>
+                                    <input ng-model="ctrl.person.zip" type="text" class="form-control" placeholder="PLZ"
+                                           id="zip"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="city">Ort</label>
-                                    <input ng-model="ctrl.person.city" type="text" class="form-control" placeholder="Ort" id="city"/>
+                                    <input ng-model="ctrl.person.city" type="text" class="form-control"
+                                           placeholder="Ort" id="city"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="tel">Tel.</label>
-                                    <input ng-model="ctrl.person.tel" type="text" class="form-control" placeholder="Tel." id="tel"/>
+                                    <input ng-model="ctrl.person.tel" type="text" class="form-control"
+                                           placeholder="Tel." id="tel"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="fax">Fax</label>
-                                    <input ng-model="ctrl.person.fax" type="text" class="form-control" placeholder="Fax" id="fax"/>
+                                    <input ng-model="ctrl.person.fax" type="text" class="form-control" placeholder="Fax"
+                                           id="fax"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="email">E-Mail</label>
-                                    <input ng-model="ctrl.person.email" type="text" class="form-control" placeholder="E-Mail" id="email"/>
+                                    <input ng-model="ctrl.person.email" type="text" class="form-control"
+                                           placeholder="E-Mail" id="email"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="birthday">Geburtsdatum</label>
-                                    <input ng-model="ctrl.person.birthday" type="date" class="form-control" placeholder="Geburtsdatum"
+                                    <input ng-model="ctrl.person.birthday" type="date" class="form-control"
+                                           placeholder="Geburtsdatum"
                                            id="birthday"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-2">
                                     <label for="isCoDriver">Ich bin Beifahrer</label>
-                                    <input ng-model="ctrl.person.isCoDriver" ng-true-value="'1'" ng-false-value="'0'" type="checkbox" class="form-control checkbox" id="isCoDriver" required/>
+                                    <input ng-model="ctrl.person.isCoDriver" ng-true-value="'1'" ng-false-value="'0'"
+                                           type="checkbox" class="form-control checkbox" id="isCoDriver" required/>
                                 </div>
                             </div>
                         </rd-widget-body>
@@ -96,31 +106,40 @@
                             <div class="row">
                                 <div class="form-group col-sm-1">
                                     <label for="isDrawing">Einzug</label>
-                                    <input ng-model="ctrl.person.isDrawing"  ng-true-value="'1'" ng-false-value="'0'" type="checkbox" class="form-control" placeholder="Einzug" id="isDrawing"/>
+                                    <input ng-model="ctrl.person.isDrawing" ng-true-value="'1'" ng-false-value="'0'"
+                                           type="checkbox" class="form-control" placeholder="Einzug" id="isDrawing"/>
                                 </div>
                                 <div class="form-group col-lg-3">
                                     <label for="iban">IBAN</label>
-                                    <input ng-model="ctrl.person.iban" type="text" class="form-control" placeholder="IBAN" ng-required="ctrl.person.isDrawing==1" ng-pattern="/[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}/"
+                                    <input ng-model="ctrl.person.iban" type="text" class="form-control"
+                                           placeholder="IBAN" ng-required="ctrl.person.isDrawing==1"
+                                           ng-pattern="/[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}/"
                                            id="iban"/>
                                 </div>
                                 <div class="form-group col-lg-3">
                                     <label for="bic">BIC</label>
-                                    <input ng-model="ctrl.person.bic" type="text" class="form-control" placeholder="BIC"  ng-required="ctrl.person.isDrawing==1" ng-pattern="/^([a-zA-Z]){4}([a-zA-Z]){2}([0-9a-zA-Z]){2}([0-9a-zA-Z]{3})?$/" id="bic"/>
+                                    <input ng-model="ctrl.person.bic" type="text" class="form-control" placeholder="BIC"
+                                           ng-required="ctrl.person.isDrawing==1"
+                                           ng-pattern="/^([a-zA-Z]){4}([a-zA-Z]){2}([0-9a-zA-Z]){2}([0-9a-zA-Z]{3})?$/"
+                                           id="bic"/>
                                 </div>
                                 <div class="form-group col-lg-3">
                                     <label for="bank">Bank</label>
-                                    <input ng-model="ctrl.person.bank" type="text" class="form-control" placeholder="Bank" id="bank"/>
+                                    <input ng-model="ctrl.person.bank" type="text" class="form-control"
+                                           placeholder="Bank" id="bank"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="healthInsuranceNo">Krankenversicherungsummer</label>
-                                    <input ng-model="ctrl.person.healthInsuranceNo" type="text" class="form-control" placeholder="Krankenversicherungsnummer"
+                                    <input ng-model="ctrl.person.healthInsuranceNo" type="text" class="form-control"
+                                           placeholder="Krankenversicherungsnummer"
                                            id="healthInsuranceNo"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="healthInsurance">Krankenversicherung</label>
-                                    <input ng-model="ctrl.person.healthInsurance" type="text" class="form-control" placeholder="Krankenversicherung"
+                                    <input ng-model="ctrl.person.healthInsurance" type="text" class="form-control"
+                                           placeholder="Krankenversicherung"
                                            id="healthInsurance"/>
                                 </div>
                             </div>
@@ -138,22 +157,26 @@
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="licenseType">Lizenztyp</label>
-                                    <input ng-model="ctrl.person.licenseType" type="text" class="form-control" placeholder="Lizenztyp" id="licenseType"/>
+                                    <input ng-model="ctrl.person.licenseType" type="text" class="form-control"
+                                           placeholder="Lizenztyp" id="licenseType"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="licenseNo">Lizenznummer</label>
-                                    <input ng-model="ctrl.person.licenseNo" type="text" class="form-control" placeholder="Lizenznummer" id="licenseNo"/>
+                                    <input ng-model="ctrl.person.licenseNo" type="text" class="form-control"
+                                           placeholder="Lizenznummer" id="licenseNo"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="isRentTransponder">Ich besitze einen eigenen Transponder</label>
-                                    <input ng-model="ctrl.person.isRentTransponder"  ng-true-value="'1'" ng-false-value="'0'" type="checkbox" class="checkbox" placeholder="Einzug"
+                                    <input ng-model="ctrl.person.isRentTransponder" ng-true-value="'1'"
+                                           ng-false-value="'0'" type="checkbox" class="checkbox" placeholder="Einzug"
                                            id="isRentTransponder"/>
                                 </div>
                                 <div class="form-group col-lg-4">
                                     <label for="transponderNo">Transpondernummer</label>
-                                    <input ng-model="ctrl.person.transponderNo" type="text" class="form-control" placeholder="Transpondernummer"
+                                    <input ng-model="ctrl.person.transponderNo" type="text" class="form-control"
+                                           placeholder="Transpondernummer"
                                            id="transponderNo"/>
                                 </div>
                             </div>
