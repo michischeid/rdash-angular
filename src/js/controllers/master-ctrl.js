@@ -2,7 +2,7 @@
  * Master Controller
  */
 
-angular.module('RDash')
+angular.module('Portal')
     .controller('MasterCtrl', ['$scope', '$cookieStore', '$location', MasterCtrl]);
 
 function MasterCtrl($scope, $cookieStore, $location) {

@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('RDash')
+    .module('Portal')
     .controller('AlertsCtrl', ['$scope', AlertsCtrl]);
 
 function AlertsCtrl($scope) {

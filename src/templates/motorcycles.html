@@ -5,12 +5,12 @@
     </div>
 </div>
 <div ng-controller="MotorcycleCtrl as ctrl">
-    <form>
+    <form name="form">
         <uib-accordion close-others="oneAtATime">
             <div class="row">
                 <div class="col-xs-12">
-                    <button type="submit" class="btn btn-success">Speichern</button>
-                    <button type="button" class="btn btn-danger">Abbrechen</button>
+                    <button ng-disabled="!form.$dirty" type="submit" class="btn btn-success">Speichern</button>
+                    <button ng-disabled="!form.$dirty" type="button" class="btn btn-danger">Abbrechen</button>
                 </div>
             </div>
             <div ng-repeat="motorcycle in ctrl.motorcycles">

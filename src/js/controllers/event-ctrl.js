@@ -2,7 +2,7 @@
  * Master Controller
  */
 
-angular.module('RDash')
+angular.module('Portal')
     .controller('EventCtrl', ['$scope', '$cookieStore', 'ngDialog', EventCtrl]);
 
 function EventCtrl($scope, $cookieStore, ngDialog) {

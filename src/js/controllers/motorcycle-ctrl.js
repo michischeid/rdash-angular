@@ -2,7 +2,7 @@
  * Master Controller
  */
 
-angular.module('RDash')
+angular.module('Portal')
     .controller('MotorcycleCtrl', ['$scope', '$cookieStore', MotorcycleCtrl]);
 
 function MotorcycleCtrl($scope, $cookieStore) {
