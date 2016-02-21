@@ -79,8 +79,8 @@
         <form name="newForm" ng-submit="ctrl.addMotorcycle(ctrl.newMotorcycle)">
             <div class="row" ng-class="collapse">
                 <div class="col-xs-12">
-                    <rd-widget status=motorcycle.status panel-class="new-widget">
-                        <rd-widget-header status=newMotorcycle.status icon="fa-plus" title="Weiteres Motorrad hinzufügen">
+                    <rd-widget status=ctrl.newMotorcycle.status panel-class="new-widget">
+                        <rd-widget-header status=ctrl.newMotorcycle.status icon="fa-plus" title="Weiteres Motorrad hinzufügen">
                         </rd-widget-header>
                         <rd-widget-body>
                             <div class="row">

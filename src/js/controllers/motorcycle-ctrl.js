@@ -38,10 +38,11 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
             capacity:"",
             cylinderCnt:"",
             class:"",
-            serialNo:""
+            serialNo:"",
+            status:false
         };
         this.motorcycles = Motorcycle.query();
-        this.newMotorcycle.status=false;
+
     };
 
 
