@@ -96,7 +96,7 @@ function stringToDate(data, header) {
     return object;
 }
 
-function notifyLoadingError(text, timeout, messageCenterService) {
+function notifyLoadingError(messageCenterService,text, timeout) {
     if (!text) {
         text = 'Ihre Daten konnten nicht geladen werden. Bitte überprüfen Sie ihre Internetverbindung!';
     }
@@ -106,7 +106,7 @@ function notifyLoadingError(text, timeout, messageCenterService) {
     messageCenterService.add('danger', text, {timeout: timeout});
 }
 
-function notifySaveSuccess(text, timeout, messageCenterService) {
+function notifySaveSuccess(messageCenterService,text, timeout, messageCenterService) {
     if (!text) {
         text = 'Ihre Daten wurden erfolgreich gespeichert!';
     }
