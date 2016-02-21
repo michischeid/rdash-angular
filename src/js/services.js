@@ -4,14 +4,14 @@ var backend = angular.module('backend', ['ngResource', 'MessageCenterModule']);
  * Person service
  */
 backend.factory('Person', ['$resource', 'messageCenterService',
-    function ($resource) {
+    function ($resource, messageCenterService) {
         return $resource('http://portal.klassik-motorsport.de/services/person.php', {}, {
             get: {
                 method: 'GET',
                 transformResponse: stringToDate,
                 interceptor: {
                     responseError: function (data) {
-                        notifyLoadingError();
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             },
@@ -19,10 +19,10 @@ backend.factory('Person', ['$resource', 'messageCenterService',
                 method: 'PUT',
                 interceptor: {
                     response: function (data) {
-                        notifySaveSuccess();
+                        notifySaveSuccess(messageCenterService);
                     },
                     responseError: function (data) {
-                        notifyLoadingError();
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             }
@@ -34,13 +34,13 @@ backend.factory('Person', ['$resource', 'messageCenterService',
  * Motorcycle service
  */
 backend.factory('Motorcycle', ['$resource', 'messageCenterService',
-    function ($resource) {
+    function ($resource, messageCenterService) {
         return $resource('http://portal.klassik-motorsport.de/services/motorcycle.php', {id:'@id'}, {
             get: {
                 method: 'GET',
                 interceptor: {
                     responseError: function (data) {
-                        notifyLoadingError();
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             },
@@ -49,7 +49,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                 isArray: true,
                 interceptor: {
                     responseError: function (data) {
-                        notifyLoadingError();
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             },
@@ -60,7 +60,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                         notifySaveSuccess();
                     },
                     responseError: function (data) {
-                        notifyLoadingError();
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             },
@@ -68,10 +68,10 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                 method: 'PUT',
                 interceptor: {
                     response: function (data) {
-                        notifySaveSuccess();
+                        notifySaveSuccess(messageCenterService);
                     },
                     responseError: function (data) {
-                        notifyLoadingError();
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             }
