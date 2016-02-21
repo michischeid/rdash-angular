@@ -12,16 +12,16 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
         year:"",
         capacity:"",
         cylinderCnt:"",
-        class:""
+        class:"",
+        serialNo:""
     };
     this.motorcycles = Motorcycle.query();
 
 
     this.saveMotorcycle = function (motorcycle) {
-        var obj = Motorcycle.save(motorcycle);
-        console.log(JSON.stringify(obj));
-        motorcycle.id=obj.id;
+        Motorcycle.save(motorcycle);
         motorcycle.status=false;
+        this.motorcycles = Motorcycle.query();
     };
     this.deleteMotorcycle = function (motorcycle,$index) {
         Motorcycle.remove(motorcycle);
@@ -35,7 +35,8 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
             year:"",
             capacity:"",
             cylinderCnt:"",
-            class:""
+            class:"",
+            serialNo:""
         };
         this.motorcycles = Motorcycle.query();
         this.newMotorcycle.status=false;
