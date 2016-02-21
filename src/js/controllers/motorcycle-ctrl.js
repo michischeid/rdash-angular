@@ -9,10 +9,10 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
     this.newMotorcycle={
         brand:"",
         model:"",
-        year:null,
-        capacity:null,
-        cylinderCnt:null,
-        class:null
+        year:"",
+        capacity:"",
+        cylinderCnt:"",
+        class:""
     };
     this.motorcycles = Motorcycle.query();
 
@@ -32,10 +32,10 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
         this.newMotorcycle={
             brand:"",
             model:"",
-            year:null,
-            capacity:null,
-            cylinderCnt:null,
-            class:null
+            year:"",
+            capacity:"",
+            cylinderCnt:"",
+            class:""
         };
         this.motorcycles = Motorcycle.query();
         this.newMotorcycle.status=false;
