@@ -5,7 +5,7 @@
 <div ng-controller="MotorcycleCtrl as ctrl">
     <uib-accordion close-others="oneAtATime">
         <div ng-repeat="motorcycle in ctrl.motorcycles | orderBy: 'model'">
-            <form name="form_{{motorcycle.id}}" ng-submit="ctrl.saveMotorcycle(motorcycle)">
+            <ng-form name="form_{{motorcycle.id}}" ng-submit="ctrl.saveMotorcycle(motorcycle)">
                 <div class="row" ng-class="collapse">
                     <div class="col-xs-12">
                         <rd-widget status=motorcycle.status>
@@ -73,7 +73,7 @@
                         </rd-widget>
                     </div>
                 </div>
-            </form>
+            </ng-form>
         </div>
 
         <form name="newForm" ng-submit="ctrl.addMotorcycle(ctrl.newMotorcycle)">
