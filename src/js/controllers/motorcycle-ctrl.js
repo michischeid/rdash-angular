@@ -11,18 +11,23 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
 
 
     this.saveMotorcycle = function (motorcycle) {
-        Motorcycle.save(motorcycle);
+        var obj = Motorcycle.save(motorcycle);
+        motorcycle.id=obj.id;
         motorcycle.status=false;
+        $scope.$apply();
+
     };
     this.deleteMotorcycle = function (motorcycle,$index) {
         Motorcycle.remove(motorcycle);
         this.motorcycles.splice($index,1);
+        $scope.$apply();
     };
     this.addMotorcycle = function (motorcycle) {
         Motorcycle.add(motorcycle);
         this.newMotorcycle={};
         this.motorcycles = Motorcycle.query();
         motorcycle.status=false;
+        $scope.$apply();
     };
 
 
