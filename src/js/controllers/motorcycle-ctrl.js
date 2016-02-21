@@ -15,6 +15,8 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
     };
     this.addMotorcycle = function (motorcycle) {
         Motorcycle.add(motorcycle);
+        this.newMotorcycle={};
+        this.motorcycles = Motorcycle.query();
     };
 
 }
