@@ -4,6 +4,7 @@
     <list default="true" id="42d42a13-9459-445b-9bfc-bd6bc33b54b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js" afterPath="$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/services.js" afterPath="$PROJECT_DIR$/src/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/motorcycles.html" afterPath="$PROJECT_DIR$/src/templates/motorcycles.html" />
     </list>
     <ignored path="rdash-angular.iws" />
@@ -25,21 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.4072165">
+              <caret line="81" column="103" selection-start-line="81" selection-start-column="103" selection-end-line="81" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="motorcycles.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="motorcycles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/motorcycles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13317192">
-              <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+            <state vertical-scroll-proportion="-15.258064">
+              <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -49,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -95,9 +96,9 @@
         <option value="$PROJECT_DIR$/src/templates/events.html" />
         <option value="$PROJECT_DIR$/src/templates/person.html" />
         <option value="$PROJECT_DIR$/src/js/controllers/person-ctrl.js" />
-        <option value="$PROJECT_DIR$/src/js/services.js" />
-        <option value="$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js" />
         <option value="$PROJECT_DIR$/src/templates/motorcycles.html" />
+        <option value="$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js" />
+        <option value="$PROJECT_DIR$/src/js/services.js" />
       </list>
     </option>
   </component>
@@ -497,7 +498,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456070175441</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="motorcycle changes">
+      <created>1456070907490</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1456070907490</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -515,12 +522,12 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16450216" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22450052" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22975814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.49421662" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.111" sideWeight="0.564143" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.192" sideWeight="0.46267086" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.192" sideWeight="0.5415352" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.192" sideWeight="0.45846477" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.49211356" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.111" sideWeight="0.435857" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.111" sideWeight="0.43375394" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.415" sideWeight="0.47108307" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -552,7 +559,8 @@
     <MESSAGE value="improved alerts" />
     <MESSAGE value="motorcylce backend connection" />
     <MESSAGE value="changes to notifiaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes to notifiaction" />
+    <MESSAGE value="motorcycle changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="motorcycle changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -867,7 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,10 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/services.js">
+    <entry file="file://$PROJECT_DIR$/src/templates/motorcycles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+        <state vertical-scroll-proportion="-15.258064">
+          <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -910,15 +917,15 @@
     <entry file="file://$PROJECT_DIR$/src/js/controllers/motorcycle-ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/motorcycles.html">
+    <entry file="file://$PROJECT_DIR$/src/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13317192">
-          <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.4072165">
+          <caret line="81" column="103" selection-start-line="81" selection-start-column="103" selection-end-line="81" selection-end-column="103" />
           <folding />
         </state>
       </provider>

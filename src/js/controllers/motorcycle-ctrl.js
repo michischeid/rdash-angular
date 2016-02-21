@@ -13,10 +13,14 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
     this.saveMotorcycle = function (motorcycle) {
         Motorcycle.save(motorcycle);
     };
+    this.deleteMotorcycle = function (motorcycle) {
+        Motorcycle.delete(motorcycle);
+    };
     this.addMotorcycle = function (motorcycle) {
         Motorcycle.add(motorcycle);
         this.newMotorcycle={};
         this.motorcycles = Motorcycle.query();
     };
+
 
 }

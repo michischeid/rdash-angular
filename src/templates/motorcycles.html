@@ -56,10 +56,18 @@
                                         <input ng-model="motorcycle.class" type="text" class="form-control"
                                                placeholder="Klasse" id="class"/>
                                     </div>
-                                    <button ng-disabled="!form.$dirty" type="submit" class="btn btn-success">Speichern
-                                    </button>
-                                    <button ng-disabled="!form.$dirty" type="button" class="btn btn-danger">Abbrechen
-                                    </button>
+                                    <div class="form-group col-sm-6">
+                                        <button ng-disabled="!form_{{motorcycle.model}}.$dirty" type="submit"
+                                                class="btn btn-success">Speichern
+                                        </button>
+                                        <button ng-disabled="!form_{{motorcycle.model}}.$dirty" type="button"
+                                                class="btn btn-danger">Abbrechen
+                                        </button>
+                                        <button ng-disabled="!form_{{motorcycle.model}}.$dirty" type="button"
+                                                ng-click="ctrl.deleteMotorcycle(motorcycle)"
+                                                class="btn btn-warning">Löschen
+                                        </button>
+                                    </div>
                                 </div>
                             </rd-widget-body>
                         </rd-widget>

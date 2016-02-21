@@ -74,6 +74,17 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                         notifySaveError(messageCenterService);
                     }
                 }
+            },
+            delete: {
+                method: 'DELETE',
+                interceptor: {
+                    response: function (data) {
+                        notifySaveSuccess(messageCenterService,"Das Motorrad wurde erfolgreich gelöscht!");
+                    },
+                    responseError: function (data) {
+                        notifySaveError(messageCenterService,"Das Motorrad konnte nicht gelöscht werden!");
+                    }
+                }
             }
         });
     }]);
