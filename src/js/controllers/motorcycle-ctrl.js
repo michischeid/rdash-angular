@@ -20,11 +20,23 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
     this.collapse = function (motorcycle){
         motorcycle.status=false;
     }
+    this.getFormId = function (motorcycle){
+        var oldId = motorcycle.oldId;
+        if(!oldId){
+            oldId= motorcycle.id;
+        }
+        return oldId;
+    }
     this.saveMotorcycle = function (motorcycle) {
+        var oldId = motorcycle.oldId;
+        if(!oldId){
+           oldId= motorcycle.id;
+        }
         motorcycle.$save(function(response){
             console.log(response);
         });
         motorcycle.status=false;
+        motorcycle.oldId=oldId;
     };
     this.deleteMotorcycle = function (motorcycle,$index) {
         motorcycle.$remove();

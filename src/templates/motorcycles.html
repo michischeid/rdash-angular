@@ -57,7 +57,7 @@
                                                placeholder="Klasse" id="class"/>
                                     </div>
                                     <div class="form-group col-md-4 col-sm-6">
-                                        <button ng-disabled="!form_{{motorcycle.id}}.$dirty" type="submit"
+                                        <button ng-disabled="!form_{{ctrl.getFormId(motorcycle)}}.$dirty" type="submit"
                                                 class="btn btn-success">Speichern
                                         </button>
                                         <button ng-click="ctrl.collapse(motorcycle)" type="button"
