@@ -21,16 +21,17 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
         motorcycle.status=false;
     }
     this.saveMotorcycle = function (motorcycle) {
-        Motorcycle.save(motorcycle);
+        motorcycle.$save(function(response){
+            console.log(response);
+        });
         motorcycle.status=false;
-        this.motorcycles = Motorcycle.query();
     };
     this.deleteMotorcycle = function (motorcycle,$index) {
-        Motorcycle.remove(motorcycle);
+        motorcycle.$remove();
         this.motorcycles.splice($index,1);
     };
     this.addMotorcycle = function (motorcycle) {
-        Motorcycle.add(motorcycle);
+        motorcycle.$add();
         this.newMotorcycle={
             brand:"",
             model:"",
@@ -41,7 +42,6 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
             serialNo:"",
             status:false
         };
-        this.motorcycles = Motorcycle.query();
 
     };
 

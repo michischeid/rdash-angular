@@ -58,6 +58,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                 interceptor: {
                     response: function (data) {
                         notifySaveSuccess(messageCenterService);
+                        return data;
                     },
                     responseError: function (data) {
                         notifySaveError(messageCenterService);
@@ -69,6 +70,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                 interceptor: {
                     response: function (data) {
                         notifySaveSuccess(messageCenterService);
+                        return data;
                     },
                     responseError: function (data) {
                         notifySaveError(messageCenterService);
