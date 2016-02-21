@@ -106,6 +106,16 @@ function notifyLoadingError(messageCenterService,text, timeout) {
     messageCenterService.add('danger', text, {timeout: timeout});
 }
 
+function notifySaveError(messageCenterService,text, timeout, messageCenterService) {
+    if (!text) {
+        text = 'Ihre Daten konnten nicht gespeichert werden. Bitte überprüfen Sie ihre Internetverbindung!';
+    }
+    if (!timeout) {
+        timeout = 3000;
+    }
+    messageCenterService.add('success', text, {timeout: timeout});
+}
+
 function notifySaveSuccess(messageCenterService,text, timeout, messageCenterService) {
     if (!text) {
         text = 'Ihre Daten wurden erfolgreich gespeichert!';
