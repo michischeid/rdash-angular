@@ -17,7 +17,9 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
     };
     this.motorcycles = Motorcycle.query();
 
-
+    this.collapse = function (motorcycle){
+        motorcycle.status=false;
+    }
     this.saveMotorcycle = function (motorcycle) {
         Motorcycle.save(motorcycle);
         motorcycle.status=false;

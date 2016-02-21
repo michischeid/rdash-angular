@@ -4,7 +4,7 @@
 
 <div ng-controller="MotorcycleCtrl as ctrl">
     <uib-accordion close-others="oneAtATime">
-        <div ng-repeat="motorcycle in ctrl.motorcycles">
+        <div ng-repeat="motorcycle in ctrl.motorcycles | orderBy: 'model'">
             <form name="form_{{motorcycle.id}}" ng-submit="ctrl.saveMotorcycle(motorcycle)">
                 <div class="row" ng-class="collapse">
                     <div class="col-xs-12">
@@ -60,7 +60,7 @@
                                         <button ng-disabled="!form_{{motorcycle.id}}.$dirty" type="submit"
                                                 class="btn btn-success">Speichern
                                         </button>
-                                        <button ng-disabled="!form_{{motorcycle.id}}.$dirty" type="button"
+                                        <button ng-click="ctrl.collapse(motorcycle)" type="button"
                                                 class="btn btn-danger">Abbrechen
                                         </button>
                                         <button type="button"
@@ -128,7 +128,7 @@
                                 </div>
                                 <button ng-disabled="!newForm.$dirty" type="submit" class="btn btn-success">Hinzufügen
                                 </button>
-                                <button ng-disabled="!newForm.$dirty" type="button" class="btn btn-danger">Abbrechen
+                                <button ng-click="ctrl.collapse(ctrl.newMotorcycle)" type="button" class="btn btn-danger">Abbrechen
                                 </button>
                             </div>
                         </rd-widget-body>
