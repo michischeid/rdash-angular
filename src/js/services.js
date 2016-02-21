@@ -22,7 +22,7 @@ backend.factory('Person', ['$resource', 'messageCenterService',
                         notifySaveSuccess(messageCenterService);
                     },
                     responseError: function (data) {
-                        notifyLoadingError(messageCenterService);
+                        notifySaveError(messageCenterService);
                     }
                 }
             }
@@ -60,7 +60,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                         notifySaveSuccess();
                     },
                     responseError: function (data) {
-                        notifyLoadingError(messageCenterService);
+                        notifySaveError(messageCenterService);
                     }
                 }
             },
@@ -71,7 +71,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                         notifySaveSuccess(messageCenterService);
                     },
                     responseError: function (data) {
-                        notifyLoadingError(messageCenterService);
+                        notifySaveError(messageCenterService);
                     }
                 }
             }
