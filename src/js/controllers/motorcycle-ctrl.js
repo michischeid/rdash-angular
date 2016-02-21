@@ -14,7 +14,7 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
         Motorcycle.save(motorcycle);
     };
     this.deleteMotorcycle = function (motorcycle) {
-        Motorcycle.delete(motorcycle);
+        Motorcycle.remove(motorcycle);
     };
     this.addMotorcycle = function (motorcycle) {
         Motorcycle.add(motorcycle);

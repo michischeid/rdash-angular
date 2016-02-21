@@ -75,7 +75,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                     }
                 }
             },
-            delete: {
+            remove: {
                 method: 'DELETE',
                 interceptor: {
                     response: function (data) {
