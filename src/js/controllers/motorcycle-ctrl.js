@@ -31,7 +31,7 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
         this.motorcycles.splice($index,1);
     };
     this.addMotorcycle = function (motorcycle) {
-        motorcycle.$add();
+        Motorcycle.add(motorcycle);
         this.newMotorcycle={
             brand:"",
             model:"",
@@ -42,7 +42,7 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
             serialNo:"",
             status:false
         };
-
+        this.motorcycles = Motorcycle.query();
     };
 
 
