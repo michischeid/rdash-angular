@@ -57,7 +57,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                 method: 'POST',
                 interceptor: {
                     response: function (data) {
-                        notifySaveSuccess();
+                        notifySaveSuccess(messageCenterService);
                     },
                     responseError: function (data) {
                         notifySaveError(messageCenterService);
@@ -86,7 +86,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
 /**
  * stringToDate
  * @param data: Is the body
- * @param heade: header of response
+ * @param header: header of response
  */
 function stringToDate(data, header) {
     var object = JSON.parse(data);
