@@ -10,7 +10,7 @@
                     <div class="col-xs-12">
                         <rd-widget status=motorcycle.status>
                             <rd-widget-header status=motorcycle.status icon="fa-motorcycle"
-                                              title="Meine {{motorcycle.model}}">
+                                              title="Meine {{motorcycle.model}} {{motorcycle.chassisNo}}">
                             </rd-widget-header>
                             <rd-widget-body>
                                 <div class="row">
@@ -39,10 +39,10 @@
                                                id="cylinderCnt"/>
                                     </div>
                                     <div class="form-group col-md-4 col-xs-6">
-                                        <label for="serialNumber">Fahrgestellnummer</label>
-                                        <input ng-model="motorcycle.serialNumber" type="text" class="form-control"
+                                        <label for="chassisNo">Fahrgestellnummer</label>
+                                        <input ng-model="motorcycle.chassisNo" type="text" class="form-control"
                                                placeholder="Fahrgestellnummer"
-                                               id="serialNumber"/>
+                                               id="chassisNo"/>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -109,10 +109,10 @@
                                            id="ncylinderCnt"/>
                                 </div>
                                 <div class="form-group col-md-4 col-xs-6">
-                                    <label for="nserialNumber">Fahrgestellnummer</label>
-                                    <input ng-model="ctrl.newMotorcycle.serialNumber" type="text" class="form-control"
+                                    <label for="nchassisNo">Fahrgestellnummer</label>
+                                    <input ng-model="ctrl.newMotorcycle.chassisNo" type="text" class="form-control"
                                            placeholder="Fahrgestellnummer"
-                                           id="nserialNumber"/>
+                                           id="nchassisNo"/>
                                 </div>
                             </div>
                             <div class="row">

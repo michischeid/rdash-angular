@@ -14,7 +14,7 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
         capacity: "",
         cylinderCnt: "",
         class: "",
-        serialNo: ""
+        chassisNo: ""
     };
     this.motorcycles = Motorcycle.query();
 
@@ -43,7 +43,7 @@ function MotorcycleCtrl($scope, $cookieStore, Motorcycle) {
             capacity: "",
             cylinderCnt: "",
             class: "",
-            serialNo: "",
+            chassisNo: "",
             status: false
         };
         this.motorcycles = Motorcycle.query();

@@ -3,12 +3,24 @@
  */
 
 angular.module('Portal')
-    .controller('EventCtrl', ['$scope', '$cookieStore', 'ngDialog','Event','Motorcycle', EventCtrl]);
+    .controller('EventCtrl', ['$scope', '$cookieStore', 'ngDialog','Event','Motorcycle','Person','Participation', EventCtrl]);
 
-function EventCtrl($scope, $cookieStore, ngDialog, Event, Motorcycle) {
+function EventCtrl($scope, $cookieStore, ngDialog, Event, Motorcycle, Person, Participation) {
 
     this.events = Event.query();
     this.motorcycles = Motorcycle.query();
+    this.person=Person.get();
+    this.participations = Participation.query();
+
+    this.participate = function (eventId, motorcycles) {
+        angular.forEach(motorcycles, function(motorcycle){
+            var participationObject={};
+            participationObject.eventId=eventId;
+            participationObject.motorcycleId = motorcycle.id;
+            Participation.add(participationObject);
+        });
+    };
+
 
     this.openParticipationPopup = function (event) {
         this.activeEvent=event;

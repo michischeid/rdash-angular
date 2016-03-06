@@ -24,6 +24,14 @@
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <label>Teilgenommen mit</label>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-lg-6" ng-repeat="participation in ctrl.participations| filter: {eventId: event.id} ">
+                                        {{participation.model}}
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="form-group col-lg-6">
                                         <button type="button" class="btn btn-success"
                                                 ng-click="ctrl.openParticipationPopup(event)">teilnehmen

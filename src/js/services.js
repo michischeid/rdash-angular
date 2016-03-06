@@ -92,6 +92,49 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
     }]);
 
 
+
+/**
+ * Motorcycle service
+ */
+backend.factory('Participation', ['$resource', 'messageCenterService',
+    function ($resource, messageCenterService) {
+        return $resource('http://portal.klassik-motorsport.de/services/participation.php', {id: '@id'}, {
+            query: {
+                method: 'GET',
+                isArray: true,
+                interceptor: {
+                    responseError: function (data) {
+                        notifyLoadingError(messageCenterService);
+                    }
+                }
+            },
+            add: {
+                method: 'POST',
+                interceptor: {
+                    response: function (data) {
+                        notifySaveSuccess(messageCenterService);
+                        return data;
+                    },
+                    responseError: function (data) {
+                        notifySaveError(messageCenterService);
+                    }
+                }
+            },
+            remove: {
+                method: 'DELETE',
+                interceptor: {
+                    response: function (data) {
+                        notifySaveSuccess(messageCenterService, "Die Teilnahme wurde erfolgreich gelöscht!");
+                    },
+                    responseError: function (data) {
+                        notifySaveError(messageCenterService, "Die Teilnahme konnte nicht gelöscht werden!");
+                    }
+                }
+            }
+        });
+    }]);
+
+
 /**
  * Event service
  */

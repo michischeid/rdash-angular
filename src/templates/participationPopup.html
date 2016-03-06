@@ -27,8 +27,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-lg-12">
+                <div class="form-group col-sm-3">
+                    <label>Trainig 1</label>
+                    <input ng-true-value="'1'" ng-false-value="'0'"
+                           type="checkbox" class="form-control checkbox" id="training1" required/>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label>Trainig 2</label>
+                    <input ng-true-value="'1'" ng-false-value="'0'"
+                           type="checkbox" class="form-control checkbox" id="training2" required/>
+                </div>
+                <div class="form-group  col-sm-3">
+                    <label>Trainig 3</label>
+                    <input ng-true-value="'1'" ng-false-value="'0'"
+                           type="checkbox" class="form-control checkbox" id="training3" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-show="ctrl.person.isDrawing==1" class="form-group col-lg-12">
                     <label>Die x.xx€ Teilnahmegebühr werden von Ihrem Konto abgebucht</label>
+                </div>
+                <div ng-show="ctrl.person.isDrawing==0" class="form-group col-lg-12">
+                    <label> Bitte überweisen sie die Teilnahmegebühr von x.xx€ auf folgendes Konto:</label>
                 </div>
             </div>
             <div class="row">
@@ -39,7 +59,7 @@
             <div class="row">
                 <div class="form-group col-lg-12">
                     <input type="button" value="jetzt kostenpflichtig teilnehmen" class="btn btn-success"
-                           ng-click="closeThisDialog('Some value')"/>
+                           ng-click="ctrl.participate(ctrl.activeEvent.id,ctrl.selectedMotorcycles) && closeThisDialog('Some value')"/>
                 </div>
             </div>
 
