@@ -35,7 +35,7 @@ backend.factory('Person', ['$resource', 'messageCenterService',
  */
 backend.factory('Motorcycle', ['$resource', 'messageCenterService',
     function ($resource, messageCenterService) {
-        return $resource('http://portal.klassik-motorsport.de/services/motorcycle.php', {id:'@id'}, {
+        return $resource('http://portal.klassik-motorsport.de/services/motorcycle.php', {id: '@id'}, {
             get: {
                 method: 'GET',
                 interceptor: {
@@ -81,10 +81,30 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
                 method: 'DELETE',
                 interceptor: {
                     response: function (data) {
-                        notifySaveSuccess(messageCenterService,"Das Motorrad wurde erfolgreich gelöscht!");
+                        notifySaveSuccess(messageCenterService, "Das Motorrad wurde erfolgreich gelöscht!");
                     },
                     responseError: function (data) {
-                        notifySaveError(messageCenterService,"Das Motorrad konnte nicht gelöscht werden!");
+                        notifySaveError(messageCenterService, "Das Motorrad konnte nicht gelöscht werden!");
+                    }
+                }
+            }
+        });
+    }]);
+
+
+/**
+ * Event service
+ */
+backend.factory('Event', ['$resource', 'messageCenterService',
+    function ($resource, messageCenterService) {
+        return $resource('http://portal.klassik-motorsport.de/services/event.php', {}, {
+            query: {
+                method: 'GET',
+                transformResponse: stringToDate,
+                isArray: true,
+                interceptor: {
+                    responseError: function (data) {
+                        notifyLoadingError(messageCenterService);
                     }
                 }
             }
@@ -102,14 +122,21 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
  * @param header: header of response
  */
 function stringToDate(data, header) {
-    var object = JSON.parse(data);
-    if (object.birthday && object.birthday != "") {
-        object.birthday = new Date(object.birthday);
+    var convertIfSet = function (string) {
+        if (string && string != "") {
+            return new Date(string);
+        }
+        return string
     }
+    var object = JSON.parse(data);
+    object.birthday = convertIfSet(object.birthday);
+    object.begin = convertIfSet(object.begin);
+    object.end = convertIfSet(object.end);
+
     return object;
 }
 
-function notifyLoadingError(messageCenterService,text, timeout) {
+function notifyLoadingError(messageCenterService, text, timeout) {
     if (!text) {
         text = 'Ihre Daten konnten nicht geladen werden. Bitte überprüfen Sie ihre Internetverbindung!';
     }
@@ -119,7 +146,7 @@ function notifyLoadingError(messageCenterService,text, timeout) {
     messageCenterService.add('danger', text, {timeout: timeout});
 }
 
-function notifySaveError(messageCenterService,text, timeout) {
+function notifySaveError(messageCenterService, text, timeout) {
     if (!text) {
         text = 'Ihre Daten konnten nicht gespeichert werden. Bitte überprüfen Sie ihre Internetverbindung!';
     }
@@ -129,7 +156,7 @@ function notifySaveError(messageCenterService,text, timeout) {
     messageCenterService.add('danger', text, {timeout: timeout});
 }
 
-function notifySaveSuccess(messageCenterService,text, timeout) {
+function notifySaveSuccess(messageCenterService, text, timeout) {
     if (!text) {
         text = 'Ihre Daten wurden erfolgreich gespeichert!';
     }

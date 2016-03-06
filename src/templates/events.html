@@ -10,22 +10,17 @@
                     <div class="col-md-6 col-xs-12" style="margin-bottom: 20px;">
                         <rd-widget status=event.status>
                             <rd-widget-header status=event.status icon="fa-flag-checkered" title="{{event.name}}"
-                                              subtitle="({{event.from |date:'dd.MM'}}-{{event.to |date:'dd.MM.yyyy'}})"
-                                              location="{{event.location}}">
+                                              subtitle="({{event.begin |date:'dd.MM'}}-{{event.end |date:'dd.MM.yyyy'}})"
+                                              location="{{event.city}}">
                             </rd-widget-header>
                             <rd-widget-body>
                                 <div class="row">
                                     <div class="form-group col-lg-6">
-                                        Zuschauerplätze direkt an der Strecke.
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                                        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                        no sea takimata sanctus est.
-
+                                       {{event.description}}
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <img class="eventPicture"
-                                             src="http://www.classic-motorrad.de/v25/images/cm2014/2014-wallduern/2014-plakat.JPG"/>
+                                             src="{{event.linkToPicture}}"/>
                                     </div>
                                 </div>
                                 <div class="row">
