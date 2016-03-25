@@ -1,145 +1,22 @@
-<!doctype html>
-<html lang="en" ng-app="Portal">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-	<title>RDash AngularJS</title>
-  <!-- STYLES -->
-  <!-- build:css lib/css/main.min.css -->
-  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.css">
-  <link rel="stylesheet" type="text/css" href="components/ngDialog/css/ngDialog.min.css">
-  <link rel="stylesheet" type="text/css" href="components/ngDialog/css/ngDialog-theme-default.min.css">
-  <link rel="stylesheet" type="text/css" href="components/angular-multi-select/isteven-multi-select.css">
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Login</title>
 
-  <!-- endbuild -->
-  <!-- SCRIPTS -->
-  <!-- build:js lib/js/main.min.js -->
-  <script type="text/javascript" src="components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
-  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script type="text/javascript" src="components/ngDialog/js/ngDialog.min.js"></script>
-  <script type="text/javascript" src="components/angular-multi-select/isteven-multi-select.js"></script>
-  <script type="text/javascript" src="components/angular-resource/angular-resource.min.js"></script>
-  <script type="text/javascript" src="components/message-center/message-center.js"></script>
-  <script type="text/javascript" src="js/services.js"></script>
-  <!-- endbuild -->
-  <!-- Custom Scripts -->
-  <script type="text/javascript" src="js/dashboard.min.js"></script>
+    <link href="lib/css/main.min.css" rel="stylesheet">
 </head>
-<body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-      <ul class="sidebar">
-        <li class="sidebar-main">
-          <a ng-click="toggleSidebar()">
-            Portal
-            <span class="menu-icon glyphicon glyphicon-transfer"></span>
-          </a>
-        </li>
-        <li class="sidebar-title"><span>NAVIGATION</span></li>
-        <li class="sidebar-list" ng-class="{'active': isActive('/Person')}">
-          <a href="#/Person">Person <span class="menu-icon fa fa-user"></span></a>
-        </li>
-        <li class="sidebar-list" ng-class="{'active': isActive('/Motorräder')}">
-          <a href="#/Motorräder" >Motorräder<span class="menu-icon fa fa-motorcycle"></span></a>
-        </li>
-        <li class="sidebar-list" ng-class="{'active': isActive('/Veranstaltungen')}">
-          <a href="#/Veranstaltungen" >Veranstaltungen<span class="menu-icon fa fa-flag-checkered"></span></a>
-        </li>
-      </ul>
-      <div class="sidebar-footer">
-        <div class="col-xs-8">
-          <a href="http://klassik-motorsport.com" target="_blank">
-            Klassik Motorsport
-          </a>
-        </div>
-        <div class="col-xs-4">
-          <a href="#">
-            Support
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- End Sidebar -->
+<body>
+<div class="container">
+    <form class="form-signin" role="form" action="services/login.php?req='.$req.'" method="post">
+        <h2 class="form-signin-heading">Login:</h2>
+        <input name="username" type="text" class="form-control" placeholder="Username" required autofocus>
+        <input name="password" type="password" class="form-control" placeholder="Passwort" required>
 
-    <div id="content-wrapper">
-      <div class="page-content">
-
-        <!-- Header Bar -->
-        <div class="row header">
-          <div class="col-xs-12">
-            <div class="user pull-right">
-              <div class="item dropdown">
-                <a href="#" class="dropdown-toggle">
-                  <img src="img/avatar.jpg">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Joe Bloggs
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Profile
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
-                    </a>
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="item dropdown">
-               <a href="#" class="dropdown-toggle">
-                  <i class="fa fa-bell-o"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Notifications
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#">Server Down!</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="meta">
-              <div class="page">
-                {{getActivePage()}}
-              </div>
-              <div class="breadcrumb-links">
-                Klassik Motorsport
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Header Bar -->
-
-        <!-- Main Content -->
-        <div ui-view></div>
-
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+</div>
 </body>
 </html>
