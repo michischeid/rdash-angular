@@ -5,7 +5,7 @@ var backend = angular.module('backend', ['ngResource', 'MessageCenterModule']);
  */
 backend.factory('Person', ['$resource', 'messageCenterService',
     function ($resource, messageCenterService) {
-        return $resource('http://portal.klassik-motorsport.de/services/person.php', {}, {
+        return $resource('https://portal.klassik-motorsport.de/services/person.php', {}, {
             get: {
                 method: 'GET',
                 transformResponse: stringToDate,
@@ -36,7 +36,7 @@ backend.factory('Person', ['$resource', 'messageCenterService',
  */
 backend.factory('Motorcycle', ['$resource', 'messageCenterService',
     function ($resource, messageCenterService) {
-        return $resource('http://portal.klassik-motorsport.de/services/motorcycle.php', {id: '@id'}, {
+        return $resource('https://portal.klassik-motorsport.de/services/motorcycle.php', {id: '@id'}, {
             get: {
                 method: 'GET',
                 transformResponse: stringToDate,
@@ -104,7 +104,7 @@ backend.factory('Motorcycle', ['$resource', 'messageCenterService',
  */
 backend.factory('Participation', ['$resource', 'messageCenterService',
     function ($resource, messageCenterService) {
-        return $resource('http://portal.klassik-motorsport.de/services/participation.php', {id: '@id'}, {
+        return $resource('https://portal.klassik-motorsport.de/services/participation.php', {id: '@id'}, {
             query: {
                 method: 'GET',
                 isArray: true,
@@ -149,7 +149,7 @@ backend.factory('Participation', ['$resource', 'messageCenterService',
  */
 backend.factory('Event', ['$resource', 'messageCenterService',
     function ($resource, messageCenterService) {
-        return $resource('http://portal.klassik-motorsport.de/services/event.php', {}, {
+        return $resource('https://portal.klassik-motorsport.de/services/event.php', {}, {
             query: {
                 method: 'GET',
                 transformResponse: stringToDate,
